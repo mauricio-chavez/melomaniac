@@ -2,7 +2,7 @@
   "name": "melomaniac",
   "version": "1.0.0",
   "description": "Facebook Messenger Chatbot with Spotify Features",
-  "main": "app.js",
+  "main": "index.js",
   "author": "Mauricio Chávez Olea <mauriciochavez@ciencias.unam.mx>",
   "license": "MIT",
   "private": true,
@@ -15,10 +15,10 @@
   },
   "devDependencies": {
     "dotenv-cli": "^3.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "serverless-google-cloudfunctions": "*"
   },
   "scripts": {
-    "start:dev": "dotenv nodemon app",
-    "change": "dotenv node changes"
+    "start:dev": "dotenv nodemon app"
   }
 }

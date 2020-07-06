@@ -2,8 +2,6 @@ const axios = require('axios').default;
 const qs = require('querystring');
 
 class SpotifyClient {
-  client = null;
-
   async authenticate(clientId, clientSecret) {
     if (!clientId || !clientSecret) {
       throw new Error('Client ID or Client Secret are missing');

@@ -9,9 +9,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(spotifyMiddleware);
+
 app.use('/webhook', webhookRouter);
 
-
-const server = app.listen(process.env.PORT || 3000, () => {
-  console.log(`Listening on PORT ${server.address().port}`);
-});
+module.exports = app

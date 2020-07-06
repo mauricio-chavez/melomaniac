@@ -1,0 +1,25 @@
+service: melomaniac
+
+provider:
+  name: google
+  stage: dev
+  runtime: nodejs10
+  region: us-central1
+  project: miscellaneous-282504
+  credentials: ~/Secret/miscellaneous-282504-977855fa8233.json
+
+plugins:
+  - serverless-google-cloudfunctions
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+    - .env
+
+functions:
+  melomaniac:
+    handler: melomaniac
+    events:
+      - http: path

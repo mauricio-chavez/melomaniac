@@ -1,5 +1,4 @@
 const { MessengerClient } = require('messaging-api-messenger');
-const { restart } = require('nodemon');
 
 // Handles messages events
 async function handleMessage(userId, message, spotifyClient) {
@@ -29,7 +28,7 @@ async function handleMessage(userId, message, spotifyClient) {
         payload: 'DECLINE',
       },
     ]);
-    // await messengerClient.sendText(userId, `Hola`);
+
   }
 }
 
